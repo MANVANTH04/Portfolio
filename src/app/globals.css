@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 40% 5%;
+    --foreground: 210 40% 98%;
+    --card: 220 40% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 40% 5%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 145 80% 42%;
+    --primary-foreground: 145 80% 98%;
+    --secondary: 220 85% 60%;
+    --secondary-foreground: 220 85% 98%;
+    --muted: 217 30% 15%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 217 30% 20%;
+    --accent-foreground: 215 25% 90%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 20% 25%;
+    --input: 217 20% 25%;
+    --ring: 145 80% 42%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .spotlight-effect {
+    background: radial-gradient(
+      600px circle at var(--mouse-x) var(--mouse-y),
+      rgba(109, 40, 217, 0.1),
+      transparent 80%
+    );
+  }
+}
+
+#particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: hsl(var(--secondary) / 0.5);
+  animation: float 25s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-50vh) translateX(10vw);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.7;
+  }
+}
