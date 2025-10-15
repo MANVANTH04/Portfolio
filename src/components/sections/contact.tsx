@@ -29,13 +29,13 @@ const contactDetails = [
     icon: <Linkedin className="h-8 w-8 text-primary" />,
     label: "LinkedIn",
     value: "manvanth-kothuri",
-    href: "https://www.linkedin.com/in/manvanth-kothuri/",
+    href: "https://www.linkedin.com/in/manvanth-kothuri-ab2b53233/",
   },
   {
     icon: <Github className="h-8 w-8 text-primary" />,
     label: "GitHub",
-    value: "manvanth5",
-    href: "https://github.com/manvanth5",
+    value: "manvanth04",
+    href: "https://github.com/manvanth04",
   },
 ];
 
